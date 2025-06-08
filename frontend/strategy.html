@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>智能投资策略助手</title>
+    <!-- 修改：CSS路径指向css文件夹 -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 加载消息旋转动画（保留样式部分） */
+        .loading-message .message-content::after {
+            content: "◌";
+            margin-left: 8px;
+            font-size: 1.2em;
+            animation: spin 1.2s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 统一导航栏 -->
+    <div class="navbar">
+        <a href="login.html">登录</a>
+        <a href="register.html">注册</a>
+        <a href="trade.html">股票交易</a>
+        <a href="strategy.html">投资策略</a>
+        <a href="consult.html">股票咨询</a>
+    </div>
+
+    <!-- 聊天主容器 -->
+    <div class="card" style="margin-top: 80px; padding: 20px;">
+        <h1>智能投资策略助手</h1>
+        <div class="chat-container" id="chatContainer">
+            <!-- 初始欢迎消息 -->
+            <div class="message assistant-message">
+                <img src="assets/avatars/assistant_avatar.png" class="avatar" alt="助手头像">
+                <div class="message-content">
+                    您好！我是智能投资策略助手。为生成精准策略，请在需求中包含以下信息（示例）：<br>  
+                    - 策略类型（如：稳健型/激进型/平衡型）  <br>
+                    - 目标行业（如：新能源/半导体/消费）  <br>
+                    - 资金规模（如：500万元/1000万元）  <br>
+                    - 风险等级（如：低/中/高）  <br>
+                    - 投资期限（如：3年/5年）  <br>
+                    示例："生成稳健型半导体行业投资策略，资金规模800万元，风险等级低，投资期限5年"<br>
+                </div>
+            </div>
+        </div>
+
+        <!-- 输入区域 -->
+        <div class="chat-input">
+            <textarea 
+                id="instruction" 
+                class="form-input" 
+                placeholder="输入您的投资需求..."
+                style="height: 60px; resize: vertical; font-size: 18px;"
+                onkeydown="if (event.key === 'Enter') { event.preventDefault(); generateStrategy(); }"  
+            ></textarea>
+            <button 
+                onclick="generateStrategy()" 
+                class="btn btn-primary"
+            >发送</button>
+        </div>
+        <div class="alert alert-error" id="errorAlert" style="margin-top: 10px;"></div>
+    </div>
+
+    <!-- 修改：JS路径指向js文件夹 -->
+    <script src="js/app.js"></script>
+    <script src="js/strategy.js"></script>
+</body>
+</html>

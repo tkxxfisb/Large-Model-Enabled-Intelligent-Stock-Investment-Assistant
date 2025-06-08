@@ -1,0 +1,8 @@
+frontend/
+├── login.html       # 登录页面
+├── register.html    # 注册页面
+├── trade.html       # 股票交易页面
+├── strategy.html    # 投资策略页面
+├── consult.html     # 股票咨询页面
+├── style.css        # 公共样式
+└── app.js           # 公共逻辑

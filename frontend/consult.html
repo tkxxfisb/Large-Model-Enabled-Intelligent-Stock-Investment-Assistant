@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>股票咨询 - 股票助手</title>
+    <link rel="stylesheet" href="css/style.css">  <!-- 调整CSS路径 -->
+</head>
+<body>
+    <div class="navbar">
+        <a href="login.html">登录</a>
+        <a href="register.html">注册</a>
+        <a href="trade.html">股票交易</a>
+        <a href="strategy.html">投资策略</a>
+        <a href="consult.html">股票咨询</a>
+    </div>
+
+    <!-- 聊天主容器 -->
+    <div class="card" style="margin-top: 80px; padding: 20px;">
+        <h1>智能股票咨询助手</h1>
+        <div class="chat-container" id="chatContainer">
+            <!-- 初始欢迎消息（带助手头像） -->
+            <div class="message assistant-message">
+                <img src="assets/avatars/assistant_avatar.png" class="avatar" alt="助手头像">
+                <div class="message-content">
+                    您好！我是股票咨询助手。当前支持以下类型的问题解答：<br>
+                    • 公司基本信息查询（示例："我想查询贵州茅台的基本信息有哪些？"）<br>
+                    • 公司供应链查询（示例："我想查询比亚迪的供应链有哪些？"）<br>
+                    • 行业上市公司查询（示例："我想查询房地产行业有哪些？"）<br>
+                    请输入符合上述类型的具体问题，我会为您提供专业解答。
+                </div>
+            </div>
+        </div>
+
+        <!-- 输入区域 -->
+        <div class="chat-input">
+            <textarea 
+                id="consultInput" 
+                class="form-input" 
+                placeholder="输入您的股票问题..."
+                style="height: 60px; margin-right: 10px; vertical-align: top; padding: 10px; box-sizing: border-box;"  
+            ></textarea>
+            <button 
+                id="sendBtn" 
+                class="btn" 
+                style="height: 60px; vertical-align: top; padding: 10px; box-sizing: border-box; font-size: 14px;"  
+            >发送</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>  <!-- 调整JS路径 -->
+    <script src="js/consult.js"></script>  <!-- 新增独立JS文件 -->
+</body>
+</html>

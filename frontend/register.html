@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册 - 股票助手</title>
+    <link rel="stylesheet" href="css/style.css">  <!-- 修正CSS路径 -->
+</head>
+<body>
+    <!-- 导航栏（与login.html保持一致） -->
+    <div class="navbar">
+        <a href="login.html">登录</a>
+        <a href="register.html">注册</a>
+        <a href="trade.html">股票交易</a>
+        <a href="strategy.html">投资策略</a>
+        <a href="consult.html">股票咨询</a>
+    </div>
+
+    <!-- 注册表单 -->
+    <div class="card">
+        <h2>用户注册</h2>
+        <form id="registerForm">
+            <div class="form-group">
+                <label class="form-label" for="regUsername">用户名</label>
+                <input type="text" class="form-input" id="regUsername" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="regPassword">密码</label>
+                <input type="password" class="form-input" id="regPassword" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="confirmPassword">确认密码</label>
+                <input type="password" class="form-input" id="confirmPassword" required>
+            </div>
+            <button type="submit" class="btn">立即注册</button>
+        </form>
+        <p class="mt-2">已有账号？<a href="login.html" style="color: var(--accent-color)">立即登录</a></p>
+    </div>
+
+    <script src="js/app.js"></script>  <!-- 保留公共JS -->
+    <script src="js/register.js"></script>  <!-- 新增独立JS文件 -->
+</body>
+</html>
