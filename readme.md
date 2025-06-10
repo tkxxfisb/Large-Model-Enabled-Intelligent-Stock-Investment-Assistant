@@ -8,6 +8,7 @@
 
 ## 项目结构
 ![聊天界面示例](exported_image.png "智能聊天助手界面")
+2222
 ```
 stock-assistant/
 ├── main.py                # 主入口
